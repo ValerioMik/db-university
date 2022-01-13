@@ -49,6 +49,13 @@ JOIN
 
 4. Selezionare tutti gli studenti con relativo corso di laurea e relativo dipartimento, 
     in ordine alfabetico per cognome e nome
+    SELECT*
+        FROM `degrees`
+            JOIN `students`
+                ON degrees.id = students.degree_id
+            JOIN `departments`
+                ON departments.id = degrees.department_id
+        ORDER BY students.name,students.surname
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
